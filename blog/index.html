@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="Hasan Selman Kara">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
 <title>Brain Dump</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -448,9 +449,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_report_writing_tips">Report Writing Tips</a>
+<li><a href="#_bash_tricks">Bash Tricks</a>
 <ul class="sectlevel2">
-<li><a href="#_were_to_start">Were to start?</a></li>
+<li><a href="#_moving_the_cursor">Moving the cursor</a></li>
+<li><a href="#_swapchange_content">Swap/Change content</a></li>
+<li><a href="#_finding_past_commands">Finding past commands</a></li>
+<li><a href="#_conemu_shortcuts">ConEmu shortcuts</a></li>
+</ul>
+</li>
+<li><a href="#_blogception">Blogception</a>
+<ul class="sectlevel2">
+<li><a href="#_java">Java</a></li>
+<li><a href="#_miscellaneous_geek_stuff">Miscellaneous Geek stuff</a></li>
+</ul>
+</li>
+<li><a href="#_how_to_hold_a_meeting">How to hold a meeting</a>
+<ul class="sectlevel2">
+<li><a href="#_preparation">Preparation</a></li>
+<li><a href="#_meeting">Meeting</a></li>
+<li><a href="#_meeting_protocol">Meeting protocol</a></li>
+<li><a href="#_where_to_start">Where to start?</a></li>
 <li><a href="#_common_grammatical_mistakes">Common Grammatical Mistakes</a></li>
 </ul>
 </li>
@@ -467,10 +485,307 @@ They might be useful for you too.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_report_writing_tips">Report Writing Tips</h2>
+<h2 id="_bash_tricks">Bash Tricks</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>v1.0.0, 2020.02.01</p>
+<p>v0.0.1, 2020.02.26</p>
+</div>
+<div class="paragraph">
+<p>Bash has some nice shortcuts.
+Here are a few I like and use frequently.
+Some are from <a href="https://www.ostechnix.com/list-useful-bash-keyboard-shortcuts/">ostechnix.com</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_moving_the_cursor">Moving the cursor</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>A</kbd></span> - Go to the beginning of a line.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>E</kbd></span> - Go to the beginning of a line.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>B</kbd></span> - Move cursor back one step.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>F</kbd></span> - Move cursor forward one step.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>B</kbd></span> - Jump to the beginning of the current/previous word.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_swapchange_content">Swap/Change content</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>T</kbd></span> - Swap char to the left with the one to the right.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>T</kbd></span> - Swap the last two words.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>W</kbd></span> - Delete the word before cursor.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>U</kbd></span> - Delete all words before the cursor.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>K</kbd></span> - Delete all words after the cursor.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>Y</kbd></span> - Undo last deletion.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>H</kbd></span> - Same same as backspace</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>U</kbd></span> - Uppercase all chars after cursor.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>L</kbd></span> - Lowercase all chars after cursor.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_finding_past_commands">Finding past commands</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><span class="keyseq"><kbd>!</kbd>+<kbd>!</kbd></span> - Repeats the last command.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>R</kbd></span> - Reverse searches commands</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>P</kbd></span> - Show the last command (repeatable)</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>.</kbd></span> - Use the last word of the previous command</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conemu_shortcuts">ConEmu shortcuts</h3>
+<div class="paragraph">
+<p>I use <a href="https://conemu.github.io/">conemu</a> as my console window with git bash as my default shell.
+All keyboard shortcuts can be found <a href="https://conemu.github.io/en/KeyboardShortcuts.html">here</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>¨</kbd></span> - Focus/Open/Close window.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>G</kbd></span> - Open new git bash tab.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>alt</kbd>+<kbd>enter</kbd></span> - Distraction free mode.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>E</kbd></span> - Duplicate active shell, split to right.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>shift</kbd>+<kbd>menu</kbd>+<kbd>left / right</kbd></span> - Move splitter left- or rightward.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>O</kbd></span> - Duplicate active shell, split to bottom.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>shift</kbd>+<kbd>menu</kbd>+<kbd>up / down</kbd></span> - Move splitter up or down.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>menu</kbd>+<kbd>arrow</kbd></span> - Move focus to different pane.</p>
+</li>
+<li>
+<p><span class="keyseq"><kbd>menu</kbd>+<kbd>shift</kbd></span> - Move focus to next pane (cyclic).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blogception">Blogception</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>v0.0.1, 2020.02.23</p>
+</div>
+<div class="paragraph">
+<p>Some blogs I enjoy reading.</p>
+</div>
+<div class="sect2">
+<h3 id="_java">Java</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><a href="http://adambien.blog/roller/">Adam Bien</a></em></p>
+<p>German, Java EE (Jakarta EE) consultant with a pragmatic approach to software development.</p>
+</li>
+<li>
+<p><em><a href="https://www.innoq.com/de/written/">innoq</a></em></p>
+<p>German/Swiss consulting company.</p>
+</li>
+<li>
+<p><em><a href="https://spring.io/blog">Spring Blog</a></em></p>
+<p>Keeping up with the Pivotals.</p>
+</li>
+<li>
+<p><em><a href="https://vladmihalcea.com/blog/">Vlad Mihalcea</a></em></p>
+<p>Everything related Java persistence and databases.</p>
+</li>
+<li>
+<p><em><a href="https://thoughts-on-java.org/blog/">Thoughts on Java by Thorben Janssen</a></em></p>
+<p>My JPA cheat sheet.</p>
+</li>
+<li>
+<p><em>Codecentric <a href="https://blog.codecentric.de/en/">en</a>/<a href="https://blog.codecentric.de/">de</a></em></p>
+<p>German consulting company.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_miscellaneous_geek_stuff">Miscellaneous Geek stuff</h3>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><a href="https://jvns.ca/">Julia Evans</a></em></p>
+<p>All kinds of different interesting CS related stuff.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_hold_a_meeting">How to hold a meeting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>v1.0.0, 2020.02.02</p>
+</div>
+<div class="paragraph">
+<p>Most meetings are useless as they are unnecessary, badly prepared,
+badly executed and rarely followed up upon.</p>
+</div>
+<div class="paragraph">
+<p>The following article contains some notes on how I like to hold meetings.</p>
+</div>
+<div class="sect2">
+<h3 id="_preparation">Preparation</h3>
+<div class="paragraph">
+<p>The invitation should contain:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Title</p>
+</li>
+<li>
+<p>Date, start time, end time</p>
+</li>
+<li>
+<p>Location (check if room is available and equipment is working)</p>
+</li>
+<li>
+<p>A quick description of what the meeting is about</p>
+</li>
+<li>
+<p><strong>Agenda items</strong></p>
+</li>
+<li>
+<p>Goals</p>
+</li>
+<li>
+<p>Eventual preparations that individual participants must make</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_meeting">Meeting</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Greet the participants.</p>
+</li>
+<li>
+<p>Summarize the goal of the meeting.</p>
+</li>
+<li>
+<p>Discuss each agenda item.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Somebody has to keep meeting minutes.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>At the end summarize what was decided and what the next action items are,
+so everybody can agree.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_meeting_protocol">Meeting protocol</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Title, Date, Meeting Type (Kick-Off, status, etc.)</p>
+</li>
+<li>
+<p>Subject</p>
+</li>
+<li>
+<p>Date and time</p>
+</li>
+<li>
+<p>Place</p>
+</li>
+<li>
+<p>Participants</p>
+</li>
+<li>
+<p>Protocol author</p>
+</li>
+<li>
+<p>To whom the protocol has been sent to</p>
+</li>
+<li>
+<p>Protocol items in chronological order</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Title: Subtitle</p>
+</li>
+<li>
+<p>Who did what and who said what</p>
+</li>
+<li>
+<p>What was decided</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Action items: <strong>Who</strong> has to do <strong>what</strong> until <strong>when</strong>?
+== Report Writing Tips
+v1.0.0, 2020.02.01</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>These are mostly notes I took from the
@@ -478,8 +793,9 @@ They might be useful for you too.</p>
 of the
 Institute for Dynamic Systems and Control at ETH Zurich.</p>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_were_to_start">Were to start?</h3>
+<h3 id="_where_to_start">Where to start?</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -488,7 +804,7 @@ It is the responsibility of assignee and supervisor to agree on
 the assignment → <strong>project agreement</strong>.</p>
 </li>
 <li>
-<p>Research study (literatur search). Goals:</p>
+<p>Research study (literature search). Goals:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -518,7 +834,7 @@ Keep track of relevant sources and the infos they contain.
 <p>During work the focus of the project may change.</p>
 </div>
 <div class="paragraph">
-<p>Solving problem → better understanging → new questions → new ansers</p>
+<p>Solving problem → better understanding → new questions → new answers</p>
 </div>
 </li>
 <li>
@@ -541,7 +857,7 @@ are implied by the thesis statement.</p>
 <li>
 <p>Before starting to write the report, create an outline of the content.
 This will keep the text together.
-Important information is seperated from unimportant.
+Important information is separated from unimportant.
 The contents of every chapter and section are connected with a common thread.</p>
 </li>
 </ol>
@@ -552,8 +868,8 @@ The contents of every chapter and section are connected with a common thread.</p
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Transationwords</strong> such as <strong><em>therefor, however, as a result, etc.</em></strong> at the
-beginning of a sentence are <strong>always folled by a comma.</strong></p>
+<p><strong>Transitionsword</strong> such as <strong><em>therefor, however, as a result, etc.</em></strong> at the
+beginning of a sentence are <strong>always followed by a comma.</strong></p>
 </li>
 <li>
 <p>A <strong>compound word</strong> is a combination of two or more words that function as
@@ -682,7 +998,7 @@ action is related to a specific point in the past or future.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-02-02 16:11:40 +0100
+Last updated 2020-02-27 11:23:16 +0100
 </div>
 </div>
 </body>
